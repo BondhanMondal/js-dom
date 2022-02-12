@@ -32,7 +32,20 @@
         </section>
     </main>
     <script>
-        console.log(document.body);
+        const student = {name: 'kismat ali', age: 60,  height: 60 }
+        //console.log(document.body);
+
+        ////const blogtitles = ['h2', ''h2']
+        const blogTitles = document.getElementsByTagName('h2');
+        for(const h2 of blogTitles){
+            console.log(h2.innerHTML);
+
+        }
+
+        const blogDetails = document.getElementsByTagName('p');
+        for(const p of blogDetails){
+            console.log(p);
+        }
     </script>
 </body>
 </html>
