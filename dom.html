@@ -9,6 +9,13 @@
         /* #second-title{
             background-color: rgba(210, 105, 30, 0.226);
         } */
+
+       /*  .blog{
+            border: 2px solid yellow;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 10px;
+        } */
     </style>
 </head>
 <body>
@@ -16,23 +23,23 @@
         <h1>Welcome to my blog website</h1>
     </header>
     <main>
-        <section>
-            <div class="article">
+        <section class="blogs">
+            <article>
                 <h2>My awesome Blog-1</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere numquam expedita qui quod veniam, nesciunt, delectus molestias soluta optio eum fugit cupiditate fugiat. Magnam molestiae minima neque itaque, saepe mollitia.</p>
-            </div>
-            <div class="article">
+            </article>
+            <article id="second-blog" class="blog">
                 <h2 id="second-title">My awesome Blog-2</h2>
                 <p>Tempora, eligendi! Eveniet id nihil non unde optio, ab, debitis tempora ad in amet delectus doloribus facere rem ipsa ea magnam ullam consequatur neque, laboriosam nemo modi sequi facilis dolorem!</p>
-            </div>
-            <div class="article">
+            </article>
+            <article class="blog">
                 <h2 id="third-title">My awesome Blog-3</h2>
                 <p>Excepturi ipsum sapiente dignissimos natus repellat temporibus voluptatem rem repudiandae sed laudantium. Amet quidem earum saepe suscipit ex. Eaque tempore excepturi quod cumque. Sequi, perspiciatis. Officia fugiat laudantium sunt optio.</p>
-            </div>
-            <div class="article">
+            </article>
+            <article class="blog">
                 <h2 id="fourth-title">My awesome Blog-4</h2>
-                <p>Excepturi ipsum sapiente dignissimos natus repellat temporibus voluptatem rem repudiandae sed laudantium. Amet quidem earum saepe suscipit ex. Eaque tempore excepturi quod cumque. Sequi, perspiciatis. Officia fugiat laudantium sunt optio.</p>
-            </div>
+                <p class="para">Excepturi ipsum sapiente dignissimos natus repellat temporibus voluptatem rem repudiandae sed laudantium. Amet quidem earum saepe suscipit ex. Eaque tempore excepturi quod cumque. Sequi, perspiciatis. Officia fugiat laudantium sunt optio.</p>
+            </article>
             
         </section>
     </main>
@@ -51,6 +58,7 @@
         for(const p of blogDetails){
             //console.log(p);
         }
+        // explore getElementById
 
         const secondTitle = document.getElementById('second-title');
         secondTitle.style.textAlign = 'center';
@@ -61,6 +69,18 @@
         thirdTitle.style.margin = '10px';
         thirdTitle.style.padding = '10px';
         thirdTitle.style.marginLeft = '20px';
+
+        //explore getElementsByClassName
+
+        const blogs = document.getElementsByClassName('blog');
+        for (const blog of blogs){
+            blog.style.border = '2px solid orange';
+            blog.style.margin = '5px';
+            blog.style.padding = '5px';
+            blog.style.borderRadius = '10px';
+        } 
+        
+
 
         
     </script>
